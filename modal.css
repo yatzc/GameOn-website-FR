@@ -238,6 +238,8 @@ footer {
   color: #fff;
   padding-top: 10px;
 }
+
+/* CLOSE */
 .close {
   position: absolute;
   right: 15px;
@@ -263,6 +265,7 @@ footer {
 .close:after {
   transform: rotate(-45deg);
 }
+
 .modal-body {
   padding: 15px 8%;
   margin: 15px auto;

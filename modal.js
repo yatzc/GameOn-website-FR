@@ -1,3 +1,5 @@
+//#region nav
+// display responsive nav
 function editNav() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
@@ -6,16 +8,31 @@ function editNav() {
     x.className = "topnav";
   }
 }
+//#endregion
 
-// DOM Elements
-const modalbg = document.querySelector(".bground");
-const modalBtn = document.querySelectorAll(".modal-btn");
-const formData = document.querySelectorAll(".formData");
+//#region DOM Elements
+const modalBtn   = document.querySelectorAll(".modal-btn");
+const modalbg    = document.querySelector(".bground");
+const formData   = document.querySelectorAll(".formData");
+const modalClose = document.querySelectorAll(".close");
+//#endregion
 
-// launch modal event
-modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
-
-// launch modal form
-function launchModal() {
+//#region modal - close/open
+// modal - open display event
+modalBtn.forEach((btn) => btn.addEventListener("click", openModal));
+// modal - open display form
+function openModal() {
   modalbg.style.display = "block";
 }
+
+// modal - close display event
+modalClose.forEach((btn) => btn.addEventListener("click", closeModal));
+// modal - close display form
+function closeModal() {
+  modalbg.style.display = "none";
+}
+//#endregion
+
+//#region modal - shield
+
+//#endregion
