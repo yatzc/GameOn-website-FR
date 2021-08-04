@@ -70,7 +70,7 @@
       ==============-->
       <section class="bground">
         <div class="content">
-          <span class="close"></span>
+          <span class="close" id="closeform"></span>
           <div class="modal-body">
             <form name="reserve" action="index.html" method="get" onsubmit="return validate();">
               <div class="formData">
@@ -151,11 +151,35 @@
                 <br>
               </div>
               <!-- btn validate form -->
-              <input class="btn-submit" type="submit" value="C'est parti"/>
+              <input class="btn-submit" id="btn-goToTks" type="submit" value="C'est parti"/>
             </form>
           </div>
         </div>
       </section>
+
+      <!--=============
+        TKS modal
+      ==============-->
+      <section class="bgroundtks">
+        <div class="content">
+          <span class="close" id="closetks"></span>
+          <div class="thanks-body">
+              <div class="wrap">
+                <div class="text-tks">
+                  Merci d'avoir soumis<br>
+                  vos informations<br>
+                  d'inscription<br>
+                </div>
+                
+                <!-- btn exit thanks -->
+                <div class="btn-tks">
+                  <input class="btn-close-tks" id="btn-close-tks" type="submit" value="Fermer"/>
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+
     </main>
     <!--===========================
       FOOTER

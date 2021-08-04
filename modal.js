@@ -1,4 +1,4 @@
-//#region nav
+//#region ==== nav
 // display responsive nav
 function editNav() {
   var x = document.getElementById("myTopnav");
@@ -10,29 +10,39 @@ function editNav() {
 }
 //#endregion
 
-//#region DOM Elements
-const modalBtn   = document.querySelectorAll(".modal-btn");
-const modalbg    = document.querySelector(".bground");
-const formData   = document.querySelectorAll(".formData");
-const modalClose = document.querySelectorAll(".close");
+//#region ==== DOM Elements
+const formBtnOpen      = document.querySelectorAll(".modal-btn");
+const formBg           = document.querySelector   (".bground");
+const formCrossClose   = document.querySelectorAll(".close");
+const thanksBtnOpen    = document.getElementById  ("btn-goToTks");
+const thanksBg         = document.querySelector   (".bgroundtks");
+const thanksCrossClose = document.getElementById  ("closetks");
+const thanksBtnClose   = document.getElementById  ("btn-close-tks");
 //#endregion
 
-//#region modal - close/open
-// modal - open display event
-modalBtn.forEach((btn) => btn.addEventListener("click", openModal));
-// modal - open display form
-function openModal() {
-  modalbg.style.display = "block";
+//#region ==== close/open modal
+// open form (btn)
+formBtnOpen.forEach((btn) => btn.addEventListener("click", openBtnForm));
+function openBtnForm() {
+  formBg.style.display = "block";
 }
-
-// modal - close display event
-modalClose.forEach((btn) => btn.addEventListener("click", closeModal));
-// modal - close display form
-function closeModal() {
-  modalbg.style.display = "none";
+// close form (cross)
+formCrossClose.forEach((btn) => btn.addEventListener("click", closeBtnForm));
+function closeBtnForm() {
+  formBg.style.display = "none";
 }
-//#endregion
-
-//#region modal - shield
-
+// close form & open THANKS (btn)
+thanksBtnOpen.addEventListener("click", function(e) {
+  formBg.style.display = "none";
+  thanksBg.style.display = "block";
+  e.preventDefault();
+});
+// close THANKS (cross)
+thanksCrossClose.addEventListener("click", function() {
+  thanksBg.style.display = "none";
+});
+// close THANKS (btn)
+thanksBtnClose.addEventListener("click", function() {
+  thanksBg.style.display = "none";
+});
 //#endregion

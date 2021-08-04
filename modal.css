@@ -1,7 +1,7 @@
+
+/*=====================================*/
 /*#region ROOT & RESET */
-/*=====================================
-  ROOT & RESET
-=====================================*/
+/*=====================================*/
 :root {
   --font-default: "DM Sans", Arial, Helvetica, sans-serif;
   /* --font-slab: var(--font-default); */
@@ -14,10 +14,9 @@
 }
 /*#endregion */
 
+/*=====================================*/
 /*#region Landing Page */
-/*=====================================
-  Landing Page
-=====================================*/
+/*=====================================*/
 body {
   margin: 0;
   display: flex;
@@ -40,10 +39,9 @@ img {
 }
 /*#endregion */
 
+/*=====================================*/
 /*#region HEADER */
-/*=====================================
-  HEADER
-=====================================*/
+/*=====================================*/
 .topnav {
   overflow: hidden;
   margin: 3em 2em 3em 2em;
@@ -92,10 +90,9 @@ img {
 }
 /*#endregion */
 
+/*=====================================*/
 /*#region MAIN */
-/*=====================================
-  MAIN
-=====================================*/
+/*=====================================*/
 main {
   font-size: 100%;
   font-weight: bolder;
@@ -107,10 +104,9 @@ main {
 }
 /*#endregion */
 
+/*=====================================*/
 /*#region CONTENT */
-/*==============
-  CONTENT
-==============*/
+/*=====================================*/
 .hero-section {
   border-radius: 10px;
   display: grid;
@@ -191,10 +187,9 @@ main {
 }
 /*#endregion */
 
+/*=====================================*/
 /*#region FOOTER */
-/*=====================================
-  FOOTER
-=====================================*/
+/*=====================================*/
 footer {
   /* padding-left: 2vw;
   padding-right: 2vw;
@@ -210,10 +205,9 @@ footer {
 }
 /*#endregion */
 
-/*#region FORM modal */
-/*=====================================
-  FORM modal
-=====================================*/
+/*=====================================*/
+/*#region modal FORM */
+/*=====================================*/
 .bground {
   display: none;
   position: fixed;
@@ -237,33 +231,6 @@ footer {
   position: relative;
   color: #fff;
   padding-top: 10px;
-}
-
-/* CLOSE */
-.close {
-  position: absolute;
-  right: 15px;
-  top: 15px;
-  width: 32px;
-  height: 32px;
-  opacity: 1;
-  cursor: pointer;
-  transform: scale(0.7);
-}
-.close:before,
-.close:after {
-  position: absolute;
-  left: 15px;
-  content: " ";
-  height: 33px;
-  width: 3px;
-  background-color: #fff;
-}
-.close:before {
-  transform: rotate(45deg);
-}
-.close:after {
-  transform: rotate(-45deg);
 }
 
 .modal-body {
@@ -465,10 +432,103 @@ input[data-error]::after {
 
 /*#endregion */
 
+/*=====================================*/
+/*#region modal THANKS */
+/*=====================================*/
+.bgroundtks {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(26, 39, 156, 0.4);
+}
+.content {
+  margin: 5% auto;
+  margin-top: 3em;
+  width: 100%;
+  max-width: 500px;
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+  background: #232323;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  padding-top: 10px;
+}
+
+.thanks-body {
+  padding: 15px 8%;
+  margin: 15px auto;
+}
+
+.wrap {
+  display: grid;
+  grid-template-rows: 170px 150px 150px 45px;
+}
+
+.text-tks {
+  text-align: center;
+  font-size: 30px;
+  grid-row: 2/3;
+}
+
+.btn-tks {
+  grid-row: 4/5;
+}
+
+.btn-close-tks {
+  background: #fe142f;
+  display: block;
+  margin: 0 auto;
+  border-radius: 7px;
+  font-size: 1rem;
+  padding: 12px 82px;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+}
+.btn-close-tks:hover {
+  background: #3876ac;
+}
+
+/*#endregion */
+
+/*#region CLOSE */
+.close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 32px;
+  height: 32px;
+  opacity: 1;
+  cursor: pointer;
+  transform: scale(0.7);
+}
+.close:before,
+.close:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 3px;
+  background-color: #fff;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+/*#endregion */
+
+/*=====================================*/
 /*#region @media 1020 */
-/*=====================================
-            @media 1020
-=====================================*/
+/*=====================================*/
 @media screen and (max-width: 1020px) {
   /*=====================================
     HEADER 1020
@@ -574,10 +634,9 @@ input[data-error]::after {
 }
 /*#endregion */
 
+/*=====================================*/
 /*#region @media 540 */
-/*=====================================
-            @media 540
-=====================================*/
+/*=====================================*/
 @media screen and (max-width: 540px) {
   img {
     padding-right: 0;
@@ -630,10 +689,9 @@ input[data-error]::after {
 }
 /*#endregion */
 
+/*=====================================*/
 /*#region ANIMATION */
-/*=====================================
-            ANIMATION
-=====================================*/
+/*=====================================*/
 @keyframes modalopen {
   from {
     opacity: 0;
